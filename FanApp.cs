@@ -1,4 +1,4 @@
-// FanApp v4 — in-place theme switch, DPI aware, tray-resident, background WMI
+﻿// FanApp v4 — in-place theme switch, DPI aware, tray-resident, background WMI
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
