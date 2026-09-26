@@ -218,9 +218,9 @@ namespace FanApp
             Controls.Add(MakeSectionLabel("实时状态", 272));
 
             var status = new Panel { Location = new Point(20, 300), Size = new Size(420, 126), BackColor = Color.Transparent };
-            status.Controls.Add(MakeStatusRow(0, "CPU 温度", 0));
-            status.Controls.Add(MakeStatusRow(42, "风扇转速", 1));
-            status.Controls.Add(MakeStatusRow(84, "当前模式", 2));
+            MakeStatusRow(status, 0, "CPU 温度", 0);
+            MakeStatusRow(status, 42, "风扇转速", 1);
+            MakeStatusRow(status, 84, "当前模式", 2);
             Controls.Add(status);
 
             Controls.Add(MakeSectionLabel("功能开关", 442));
@@ -257,14 +257,16 @@ namespace FanApp
             return l;
         }
 
-        Label MakeStatusRow(int y, string name, int idx)
+        Panel MakeStatusRow(Panel parent, int y, string name, int idx)
         {
             var nameL = new Label { Text = name, ForeColor = T.SubText, Font = new Font("Microsoft YaHei UI", 10.5f), Location = new Point(4, y), Size = new Size(120, 32), AutoSize = false, BackColor = Color.Transparent };
             var valL = new Label { Text = "…", ForeColor = T.Text, Font = new Font("Microsoft YaHei UI", 10.5f, FontStyle.Bold), Location = new Point(130, y), Size = new Size(280, 32), AutoSize = false, BackColor = Color.Transparent };
             subLabels.Add(nameL);
             textLabels.Add(valL);
             statusVals[idx] = valL;
-            return nameL;
+            parent.Controls.Add(nameL);
+            parent.Controls.Add(valL);
+            return parent;
         }
 
         Toggle MakeToggle(int y, string setMethod, string getMethod)
