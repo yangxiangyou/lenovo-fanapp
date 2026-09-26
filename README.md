@@ -4,6 +4,8 @@
 
 原生 C# WinForms，无 WebView、无 Python、无 Node，直调 WMI，单文件编译。
 
+![FanApp 截图](docs/screenshot-light.png)
+
 ## 功能
 
 - **性能模式**：安静 / 均衡 / 野兽 三档切换（`SetSmartFanMode`）
