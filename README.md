@@ -4,7 +4,7 @@
 
 原生 C# WinForms，无 WebView、无 Python、无 Node，直调 WMI，单文件编译。
 
-![FanApp 截图](docs/screenshot.png)
+![FanApp 截图](docs/fanapp-v4-light.png?v=2)
 
 ## 功能
 
